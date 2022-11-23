@@ -1,0 +1,19 @@
+{
+    "name": "miguel/estagio",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/helpers/html.php"
+        ]
+    },      
+    "authors": [
+        {
+            "name": "Miguel Leite",
+            "email": "miguelleite200leite@gmail.com"
+        }
+    ],
+    "require": {}
+}

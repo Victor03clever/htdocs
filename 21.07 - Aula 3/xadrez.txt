@@ -1,0 +1,16 @@
+XADREZ
+
+
+
+<table>
+<?for($i=0){?>
+<tr>
+<?for ($k=0){?>
+<td bgcolor="<?
+//seleciona a cor
+?>">
+</td>
+<?}?>
+</tr>
+<?}?>
+</table>

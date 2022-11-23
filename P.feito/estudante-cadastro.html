@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Cadastrar - SGE</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+
+
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logotipo.png" alt="">
+        <span class="d-none d-lg-block"> SGE</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <div class="search-bar">
+      <form class="search-form d-flex align-items-center" method="POST" action="#">
+        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+    </div><!-- End Search Bar -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#">
+            <i class="bi bi-chat-left-dots-fill"></i>
+          </a><!-- End Messages Icon -->
+
+        </li>
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">V_C</span>
+          </a><!-- End Profile Image Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Victor Clever</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="login.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="index.html">
+          <i class="bi bi-grid-3x3-gap"></i>
+          <span>Painel Principal</span>
+        </a>
+      </li><!-- End Painel Principal Nav -->
+
+      <li class="nav-heading"><span style="font-size: 13px; font-weight: bold; ">Cadastramento</span></li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="estudante-cadastro.html">
+          <i class="bi bi-plus-circle-dotted"></i>
+          <span>Cadastrar</span>
+        </a>
+      </li><!-- End cadastrar Nav -->
+
+      <li class="nav-heading"><span style="font-size: 13px; font-weight: bold; ">Listas</span></li>
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#estudante-nav" data-bs-toggle="collapse" href="#">
+          <img src="imagens/student.png" width="20px" height="20px" style="margin-right: 7px;"><span>Estudantes</span><i
+            class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="estudante-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+
+          <li>
+            <a href="estudante-lista.html">
+              <i class="bi bi-circle"></i><span>Listar</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End estudante -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#banca-nav" data-bs-toggle="collapse" href="#">
+          <img src="imagens/banca.png" width="20px" height="20px" style="margin-right: 7px;"><span>Banca</span><i
+            class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="banca-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="banca-lista.html">
+              <i class="bi bi-circle"></i><span>Listar</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End banca -->
+
+      </li>
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#cursos-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-book-half"></i><span>Cursos</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="cursos-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="cursos-lista.html">
+              <i class="bi bi-circle"></i><span>Listar</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End cursos -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="empresa.html">
+          <i class="bi bi-building"></i>
+          <span>Empresa</span>
+        </a>
+      </li><!-- End empresa Nav -->
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="relatorio.html">
+          <i class="bi bi-receipt-cutoff"></i>
+
+          <span>Relatórios</span>
+        </a>
+      </li><!-- End Relatorio Nav -->
+      <li class="nav-heading"><span style="font-size: 13px; font-weight: bold; ">Configuração</span></li>
+
+
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="settings.html">
+          <i class="bi bi-gear"></i>
+          <span>Settings</span>
+        </a>
+      </li><!-- End settings -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="login.html">
+          <i class="bi bi-door-open"></i>
+          <span>Logout</span>
+        </a>
+      </li><!-- End Login Page Nav -->
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <a href="estudante-cadastro">
+        <h1>Cadastramento</h1>
+      </a>
+    </div><!-- End Page Title -->
+    <br><br>
+    <section class="section">
+      <div class="card">
+        <div class="card-body">
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <button class="nav-link active" id="nav-aluno-tab" data-bs-toggle="tab" data-bs-target="#nav-aluno"
+                type="button" role="tab" aria-controls="nav-aluno" aria-selected="true">Estudante</button>
+              <button class="nav-link" id="nav-curso-tab" data-bs-toggle="tab" data-bs-target="#nav-curso" type="button"
+                role="tab" aria-controls="nav-curso" aria-selected="false">Cursos</button>
+              <button class="nav-link" id="nav-empresa-tab" data-bs-toggle="tab" data-bs-target="#nav-empresa"
+                type="button" role="tab" aria-controls="nav-empresa" aria-selected="false">Empresas</button>
+              <button class="nav-link" id="nav-mono-tab" data-bs-toggle="tab" data-bs-target="#nav-mono" type="button"
+                role="tab" aria-controls="nav-mono" aria-selected="false">Monografias</button>
+              <button class="nav-link" id="nav-tutor-tab" data-bs-toggle="tab" data-bs-target="#nav-tutor" type="button"
+                role="tab" aria-controls="nav-tutor" aria-selected="false">Tutores</button>
+              <button class="nav-link" id="nav-estagio-tab" data-bs-toggle="tab" data-bs-target="#nav-estagio"
+                type="button" role="tab" aria-controls="nav-estagio" aria-selected="false">Estagios</button>
+              <button class="nav-link" id="nav-superv-tab" data-bs-toggle="tab" data-bs-target="#nav-superv"
+                type="button" role="tab" aria-controls="nav-superv" aria-selected="false">superVisor Estagio</button>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-aluno" role="tabpanel" aria-labelledby="nav-aluno-tab">
+
+
+              <form class="row g-3 needs-validation" novalidate method="post">
+
+                <legend><br> Dados Pessoais</legend>
+                <div class="col-md-4">
+                  <label for="nome_aluno" class="form-label">Estudante</label>
+                  <input type="text" class="form-control" id="nome_aluno" name="nome_aluno"
+                    placeholder="Nome do Estudante" required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="nome_encarregado" class="form-label">Encarregado de Educação</label>
+                  <input type="text" class="form-control" id="nome_encarregado" name="nome_encarregado"
+                    placeholder="Nome do Encarregado" required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="data_nascimento" class="form-label">Data de Nascimento</label>
+
+                  <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <label for="residencia" class="form-label">Residência</label>
+                  <input type="text" class="form-control" id="residencia" name="residencia" placeholder="Residência"
+                    required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="email" class="form-label">Email</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" id="email" name="email" aria-describedby="inputGroupPrepend"
+                      required>
+                    <div class="invalid-feedback">
+                      Preencha o Campo
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="contacto" class="form-label">Phone</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">+244</span>
+                    <input type="text" class="form-control" id="contacto" name="contacto" required>
+                    <div class="invalid-feedback">
+                      Preencha o Campo
+                    </div>
+                  </div>
+                </div>
+                <br>
+                <label for="sexo1"> Sexo:</label>
+                <div class="form-check ms-4">
+                  <input class="form-check-input" type="radio" name="sexo" id="sexo1" value="M" required checked>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                  <label class="form-check-label" for="sexo1">
+                    Masculino
+                  </label>
+                </div>
+                <div class="form-check ms-4">
+                  <input class="form-check-input" type="radio" name="sexo" id="sexo2" value="F" required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                  <label class="form-check-label" for="sexo2">
+                    Femenino
+                  </label>
+                </div>
+
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Salvar</button>
+                </div>
+
+              </form>
+
+
+
+
+
+            </div>
+            <div class="tab-pane fade" id="nav-curso" role="tabpanel" aria-labelledby="nav-curso-tab">
+
+
+              <form class="row g-3 needs-validation" novalidate method="post">
+
+                <legend><br> Curso</legend>
+                <div class="col-md-4">
+                  <label for="nome_curso" class="form-label">Nome do Curso</label>
+                  <input type="text" class="form-control" id="nome_curso" name="nome_curso" placeholder="Nome do Curso"
+                    required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="desc_curso" class="form-label">Descrição</label>
+                  <input type="text" class="form-control" id="desc_curso" name="desc_curso"
+                    placeholder="Descreva o Curso" required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Salvar</button>
+                </div>
+              </form>
+
+
+            </div>
+            <div class="tab-pane fade" id="nav-empresa" role="tabpanel" aria-labelledby="nav-empresa-tab">
+
+
+
+              <form class="row g-3 needs-validation" novalidate method="post">
+
+                <legend><br> Empresa</legend>
+                <div class="col-md-4">
+                  <label for="nome_empresa" class="form-label">Nome Da Empresa</label>
+                  <input type="text" class="form-control" id="nome_empresa" name="nome_empresa"
+                    placeholder="Nome da Empresa" required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="actividade_empresa" class="form-label">Actividade</label>
+                  <input type="text" class="form-control" id="actividade_empresa" name="actividade_empresa"
+                    placeholder="Actividade da Empresa" required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="email_empresa" class="form-label">Email</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" id="email_empresa" name="email_empresa"
+                      aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                      Preencha o Campo
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="contacto_empresa" class="form-label">Phone</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">+244</span>
+                    <input type="text" class="form-control" id="contacto_empresa" name="contacto_empresa" required>
+                    <div class="invalid-feedback">
+                      Preencha o Campo
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Salvar</button>
+                </div>
+              </form>
+
+            </div>
+            <div class="tab-pane fade" id="nav-mono" role="tabpanel" aria-labelledby="nav-mono-tab">
+
+
+              <form class="row g-3 needs-validation" novalidate method="post">
+
+                <legend><br> Monografia</legend>
+                <div class="col-md-5">
+                  <label for="tema_mono" class="form-label">Tema</label>
+                  <input type="text" class="form-control" id="tema_mono" name="tema_mono" placeholder="Tema do trabalho"
+                    required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <label for="entrega_mono" class="form-label">Data Postada</label>
+
+                  <input type="date" class="form-control" id="entrega_mono" name="entrega_mono" required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="pdf_mono" class="form-label">Trabalho em PDF</label>
+                  <input class="form-control" type="file" id="pdf_mono" multiple required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+
+                  </div>
+                </div>  
+                  <div class="mb-3">
+                    <label for="aluno_mono" class="form-label">Aluno Correspondente</label>
+                    <select class="form-select" name="aluno_mono" id="aluno_mono" aria-label="Default select example" required>
+                      <option selected>Selecione Aqui</option>
+                      <option value="1">...</option>
+                      <option value="2">...</option>
+                      <option value="3">...</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Preencha o Campo
+  
+                    </div>
+                  </div>
+                
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Salvar</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="tab-pane fade" id="nav-tutor" role="tabpanel" aria-labelledby="nav-tutor-tab">
+
+
+              <form class="row g-3 needs-validation" novalidate method="post">
+
+                <legend><br> Tutores</legend>
+                <div class="col-md-4">
+                  <label for="nome_tutor" class="form-label">Nome do Tutor</label>
+                  <input type="text" class="form-control" id="nome_tutor" name="nome_tutor"
+                    placeholder="Nome do tutor" required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="espec_tutor" class="form-label">Especialidade</label>
+                  <input type="text" class="form-control" id="espec_tutor" name="espec_tutor"
+                    placeholder="Descreva a especialidade" required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <label for="residencia_tutor" class="form-label">Residência</label>
+                  <input type="text" class="form-control" id="residencia_tutor" name="residencia_tutor" placeholder="Residência"
+                    required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="email_tutor" class="form-label">Email</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" id="email_tutor" name="email_tutor" aria-describedby="inputGroupPrepend"
+                      required>
+                    <div class="invalid-feedback">
+                      Preencha o Campo
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="contacto_tutor" class="form-label">Phone</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">+244</span>
+                    <input type="text" class="form-control" id="contacto_tutor" name="contacto_tutor" required>
+                    <div class="invalid-feedback">
+                      Preencha o Campo
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Salvar</button>
+                </div>
+
+              </form>
+            </div>
+            <div class="tab-pane fade" id="nav-estagio" role="tabpanel" aria-labelledby="nav-estagio-tab">
+
+              <form class="row g-3 needs-validation" novalidate method="post">
+
+                <legend><br> Estagios</legend>
+                <div class="col-md-4">
+                  <label for="Categoria_estagio" class="form-label">Categoria</label>
+                  <input type="text" class="form-control" id="Categoria_estagio" name="Categoria_estagio"
+                    placeholder="Categoria" required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                </div>
+               <div class="col-md-4">
+                  <label for="inicio_estagio" class="form-label">Data de Início</label>
+
+                  <input type="date" class="form-control" id="inicio_estagio" name="inicio_estagio" required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label for="final_estagio" class="form-label">Data de Final</label>
+
+                  <input type="date" class="form-control" id="final_estagio" name="final_estagio" required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Salvar</button>
+                </div>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="nav-superv" role="tabpanel" aria-labelledby="nav-superv-tab">
+
+              <form class="row g-3 needs-validation" novalidate method="post">
+
+                <legend><br> Supervisores</legend>
+                <div class="col-md-4">
+                  <label for="nome_svisor" class="form-label">Nome do Supervisor do Estágio</label>
+                  <input type="text" class="form-control" id="nome_svisor" name="nome_svisor"
+                    placeholder="Nome" required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <label for="endereco_svisor" class="form-label">Residência</label>
+                  <input type="text" class="form-control" id="endereco_svisor" name="endereco_svisor" placeholder="Residência"
+                    required>
+                  <div class="invalid-feedback">
+                    Preencha o Campo
+                  </div>
+                </div>
+               <div class="col-md-3">
+                  <label for="contacto_svisor" class="form-label">Phone</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">+244</span>
+                    <input type="text" class="form-control" id="contacto_svisor" name="contacto_svisor" required>
+                    <div class="invalid-feedback">
+                      Preencha o Campo
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Salvar</button>
+                </div>
+
+              </form>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Project Clever</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <a href="victor/index.html">Victor_Clever</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.min.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

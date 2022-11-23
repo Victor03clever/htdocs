@@ -1,0 +1,20 @@
+{
+    "name": "miguel/jornal",
+    "autoload": {
+        "files": [
+            "app/utils/utils.php"
+        ],
+        "psr-4": {
+            "App\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "Miguel Leite",
+            "email": "miguelleite200leite@gmail.com"
+        }
+    ],
+    "require": {
+        "coffeecode/router": "^1.0"
+    }
+}
